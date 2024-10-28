@@ -1,0 +1,10 @@
+<div class="container mt-5 mb-5">
+  <ul class="list-group">
+    <li *ngFor="let request of requests" class="list-group-item">
+      {{ request.name }} asked for {{ request.currency }} on {{ request.date | date }} - Value: {{ request.value }}
+    </li>
+  </ul>
+  <div *ngIf="requests.length === 0" class="mt-5">
+    No requests found.
+  </div>
+</div>
